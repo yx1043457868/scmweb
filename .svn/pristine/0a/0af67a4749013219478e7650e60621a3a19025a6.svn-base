@@ -1,0 +1,189 @@
+/* 覆盖mint-ui的primary颜色，改为自己UI的主题色 */
+
+@base: #eb6000;
+@gray: #666666;
+.mint-header {
+    height: 44px !important;
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #d9d9d9, #d9d9d9 50%, transparent 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.mint-header-title {
+    font-size: 18px;
+    color: #666666;
+    line-height: 19px;
+}
+
+.mint-button-icon .mintui.mintui-back {
+    font-size: 18px;
+    color: #666666;
+}
+
+.mint-button:not(.is-disabled):active::after {
+    opacity: .2/* .6 */
+}
+
+.mint-button--primary {
+    background-color: @base;
+}
+
+.mint-button--primary.is-plain {
+    border: 1px solid @base;
+    color: @base
+}
+.mint-switch-input:checked+.mint-switch-core {
+    border-color: @base;
+    background-color: @base;
+}
+
+.mint-tab-item-icon {
+    width: 24px;
+    height: 24px;
+    color: @gray;
+    margin: 0 auto 5px;
+}
+
+.mint-tab-item-label {
+    font-size: 12px;
+    line-height: 1;
+    color: @gray;
+}
+
+.mint-navbar .mint-tab-item {
+    position: relative;
+    font-size: 14px;
+    height: auto;
+    line-height: 40px;
+    padding: 13px 0 !important;
+}
+
+.mint-navbar .mint-tab-item.is-selected {
+    border-bottom: none !important;
+    color: @base;
+    margin-bottom: 0 !important;
+}
+
+.mint-navbar .mint-tab-item.is-selected .mint-tab-item-label,
+.mint-navbar .mint-tab-item .mint-tab-item-label {
+    font-size: 15px;
+}
+
+.mint-navbar .mint-tab-item.is-selected::after {
+    content: "";
+    height: 2px;
+    background: @base;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+}
+
+.mint-tabbar>.mint-tab-item.is-selected,
+.mint-tab-item.is-selected .mint-tab-item-icon,
+.mint-tab-item.is-selected .mint-tab-item-label {
+    background-color: transparent;
+    color: @base;
+}
+
+.mint-search {
+    height: 50px;
+    .mint-searchbar-inner {
+        height: 32px;
+        border: 1px solid #dddddd;
+    }
+    input[type=search] {
+        height: auto;
+        background-color: transparent;
+        margin-bottom: 0;
+       
+    }
+}
+
+.mint-searchbar {
+    background-color: #fff;
+}
+
+.mint-searchbar-cancel {
+    color: #666666;
+}
+
+.mint-checkbox-input:checked+.mint-checkbox-core {
+    background-color: @base;
+    border-color: @base;
+}
+
+.mint-radio-input:checked+.mint-radio-core {
+    background-color: @base;
+    border-color: @base;
+}
+
+.mt-range-progress {
+    background-color: @base;
+}
+
+.mt-progress-progress {
+    background-color: @base;
+}
+
+.mint-msgbox-confirm {
+    color: @base;
+}
+
+.mint-msgbox-confirm:active {
+    color: @base;
+}
+
+.mint-datetime-action {
+    color: @base;
+}
+
+.mint-indicator,
+.mint-indicator-mask {
+    z-index: 999 !important;
+}
+
+.mint-indicator-wrapper {
+    z-index: 1000 !important;
+}
+.mint-cell-title,.mint-cell-label{
+    font-size: 14px;
+    color: #333333;
+    margin-top: 0;
+   
+}
+.mint-cell-swipe {
+    &:last-child {
+        background-image: none !important;
+    }
+    .mint-cell-wrapper {
+        background-image: none;
+        padding: 0;
+        line-height: auto !important;
+        .mint-cell-title {
+            flex: 0;
+        }
+        .mint-cell-value {
+            flex: 1;
+        }
+    }
+    .mint-cell-right {
+        .mint-cell-swipe-button {
+            line-height: 80px;
+        }
+    }
+}
+.mint-field-core{
+    font-size: 14px;
+}
+.mint-header-button.is-right,.mint-header-button.is-left{
+    color: #666666;
+    i{
+        font-size: 20px;
+        color: #666666;
+    } 
+}
